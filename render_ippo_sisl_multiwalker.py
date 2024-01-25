@@ -12,7 +12,7 @@ algo = marl.algos.ippo(hyperparam_source="sisl_multiwalker")
 model = marl.build_model(env, algo, {"core_arch": "mlp", "encode_layer": "128-256"})
 
 # uncomment to train new model
-algo.fit(env, model, stop={"timesteps_total": 10000000}, checkpoint_freq=20, share_policy="group", local_mode=True)
+# algo.fit(env, model, stop={"timesteps_total": 10000000}, checkpoint_freq=20, share_policy="group", local_mode=True)
 
 # render from checkpoint model located in model_path folder
 algo.render(env, model,
