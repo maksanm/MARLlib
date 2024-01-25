@@ -22,7 +22,7 @@ cd ..
 ```
 
 ## Environments and algorithms configuration
-The configuration files for the environments can be found in the `/MARLlib/marllib/envs/base_env/config` directory. A list of the available arguments can be found in the [MPE Simple Adversary](https://pettingzoo.farama.org/environments/mpe/simple_adversary/) and [SISL Multiwalker](https://pettingzoo.farama.org/environments/sisl/multiwalker/) sections of the ***PettingZoo*** documentation.
+The configuration files for the environments can be found in the `/MARLlib/marllib/envs/base_env/config/(mpe|sisl).yaml` files. A list of the available arguments can be found in the [MPE Simple Adversary](https://pettingzoo.farama.org/environments/mpe/simple_adversary/) and [SISL Multiwalker](https://pettingzoo.farama.org/environments/sisl/multiwalker/) sections of the ***PettingZoo*** documentation.
 
 The configurations for the **IPPO** and **MAPPO** algorithms can be found under the `/MARLlib/marllib/marl/algos/hyperparams/finetuned/{environment_name}_{map_name}` directories.
 
