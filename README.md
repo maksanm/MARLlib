@@ -2,14 +2,17 @@
 Using ***MARLlib***, a MARL library that utilizes ***Ray*** and one of its toolkits ***RLlib***, to test **Multi-agent Proximal Policy Optimization (PPO)** and **Independent PPO** MARL algorithms in selected multi-agent environments.
 
 ## Installation
+The installation of the ***MARLlib*** may be quite challenging due to conflicts between the versions of the packages it depends on.
 1. Create and activate Python 3.8 (or 3.9) virtual environment (e.g. using ***venv***).
-2. Install ***MARLlib*** with dependencies.
+2. Dwngrade ***whell*** and install ***MARLlib*** with dependencies.
 ```
 cd MARLlib
+pip install wheel==0.38.0
 pip install -e .
 ```
 3. Install environments (MPE environment installs with ***MARLlib***) and ***gym***.
 ```
+pip install swig
 pip install pettingzoo[sisl]==1.12.0
 pip install gym==0.20.0
 ```
@@ -32,3 +35,5 @@ To visualize any of the trained models, run the appropriate Python script. For e
 python render_ippo_sisl_multiwalker.py
 ```
 All checkpoints for the trained models are located in the `/results` folder. To check the state of a model at a desired iteration, replace `model_path` in the corresponding script.
+
+You can also check the charts illustrating the differences between **IPPO** and **MAPPO** in the `.ipynb` files.
