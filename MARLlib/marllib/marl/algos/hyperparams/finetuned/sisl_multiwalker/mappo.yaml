@@ -20,14 +20,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-env: sisl
+# MAPPO parameters
 
-env_args:
-  map_name: "multiwalker" # others can be found in sisl.py
-  max_cycles: 300
-  forward_reward: 2
+# Detailed explanation for each hyper parameter can be found in ray/rllib/agents/ppo/ippo.py
 
-mask_flag: False
-global_state_flag: False
-opp_action_in_cc: True
-agent_level_batch_update: False
+algo_args:
+  use_gae: True
+  lambda: 1.0
+  kl_coeff: 0.2
+  batch_episode: 16
+  num_sgd_iter: 8
+  vf_loss_coeff: 1.0
+  lr: 0.0005
+  entropy_coeff: 0.01
+  clip_param: 0.3
+  vf_clip_param: 10.0
+  batch_mode: "truncate_episodes"
+
+
