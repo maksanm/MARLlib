@@ -37,5 +37,3 @@ To visualize any of the trained models, run the appropriate Python script. For e
 python render_ippo_sisl_multiwalker.py
 ```
 All checkpoints for the trained models are located in the `/results` folder. To check the state of a model at a desired iteration, replace `model_path` in the corresponding script.
-
-You can also check the charts illustrating the differences between **IPPO** and **MAPPO** in the `.ipynb` files.
