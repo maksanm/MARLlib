@@ -17,7 +17,7 @@ model = marl.build_model(env, algo, {"core_arch": "mlp", "encode_layer": "128-25
 # render from checkpoint model located in model_path folder
 algo.render(env, model,
              restore_path={'params_path': "results/mappo_mlp_multiwalker/params.json",
-                           'model_path': f"results/mappo_mlp_multiwalker/checkpoint_000180/checkpoint-180",
+                           'model_path': "results/mappo_mlp_multiwalker/checkpoint_000180/checkpoint-180",
                            'render': True},
              local_mode=True,
              share_policy="group",

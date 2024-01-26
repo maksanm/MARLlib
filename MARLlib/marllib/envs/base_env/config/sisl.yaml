@@ -24,8 +24,8 @@ env: sisl
 
 env_args:
   map_name: "multiwalker" # others can be found in sisl.py
-  max_cycles: 300
-  forward_reward: 1
+  max_cycles: 500
+  forward_reward: 2
 
 mask_flag: False
 global_state_flag: False
