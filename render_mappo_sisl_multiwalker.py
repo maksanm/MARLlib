@@ -12,12 +12,12 @@ algo = marl.algos.mappo(hyperparam_source="sisl_multiwalker")
 model = marl.build_model(env, algo, {"core_arch": "mlp", "encode_layer": "128-256"})
 
 # uncomment to train new model
-# algo.fit(env, model, stop={"timesteps_total": 10000000}, checkpoint_freq=20, share_policy="group", local_mode=True, num_workers=9)
+# algo.fit(env, model, stop={"timesteps_total": 10000000}, checkpoint_freq=20, share_policy="group", local_mode=True, num_workers=10)
 
 # render from checkpoint model located in model_path folder
 algo.render(env, model,
              restore_path={'params_path': "results/mappo_mlp_multiwalker/params.json",
-                           'model_path': "results/mappo_mlp_multiwalker/checkpoint_000180/checkpoint-180",
+                           'model_path': "results/mappo_mlp_multiwalker/checkpoint_000200/checkpoint-200",
                            'render': True},
              local_mode=True,
              share_policy="group",

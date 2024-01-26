@@ -1,6 +1,6 @@
 {
   "batch_mode": "truncate_episodes",
-  "clip_param": 0.3,
+  "clip_param": 0.15,
   "entropy_coeff": 0.01,
   "env": "sisl_multiwalker",
   "evaluation_interval": 50,
@@ -24,9 +24,9 @@
       "env_args": {
         "forward_reward": 2,
         "map_name": "multiwalker",
-        "max_cycles": 300
+        "max_cycles": 500
       },
-      "episode_limit": 300,
+      "episode_limit": 500,
       "evaluation_interval": 50,
       "force_coop": false,
       "framework": "torch",
@@ -46,7 +46,7 @@
       "num_cpus_per_worker": 1,
       "num_gpus": 1,
       "num_gpus_per_worker": 0,
-      "num_workers": 9,
+      "num_workers": 10,
       "opp_action_in_cc": true,
       "policy_mapping_info": {
         "multiwalker": {
@@ -89,16 +89,16 @@
   },
   "multiagent": {
     "policies": "{'shared_policy'}",
-    "policy_mapping_fn": "<function run_cc.<locals>.<lambda> at 0x000001AA4181BE50>"
+    "policy_mapping_fn": "<function run_cc.<locals>.<lambda> at 0x000002146F566940>"
   },
   "num_gpus": 1,
   "num_gpus_per_worker": 0,
-  "num_sgd_iter": 8,
-  "num_workers": 9,
+  "num_sgd_iter": 10,
+  "num_workers": 10,
   "seed": 321,
-  "sgd_minibatch_size": 4800,
+  "sgd_minibatch_size": 5000,
   "simple_optimizer": false,
-  "train_batch_size": 4800,
+  "train_batch_size": 5000,
   "use_gae": true,
   "vf_clip_param": 10.0,
   "vf_loss_coeff": 1.0
